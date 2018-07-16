@@ -20,19 +20,20 @@ namespace CleanCode.PoorMethodSignatures
 
         public User GetUser(string username, string password, bool login)
         {
-            return login ? Metodo1(username, password) : Metodo2(username);
+            return EvaluateUser(username, password, login);
         }
 
-        private User Metodo2(string username)
+        private User EvaluateUser(string username, string password, bool login)
         {
-            return _dbContext.Users.SingleOrDefault(u => u.Username == username);
-        }
-
-        private User Metodo1(string username, string password)
-        {
+            if (password == null && login == false)
+            {
+                return _dbContext.Users.SingleOrDefault(u => u.Username == username);
+            }
             var user = _dbContext.Users.SingleOrDefault(u => u.Username == username && u.Password == password);
             if (user != null)
+            {
                 user.LastLogin = DateTime.Now;
+            }
             return user;
         }
     }
