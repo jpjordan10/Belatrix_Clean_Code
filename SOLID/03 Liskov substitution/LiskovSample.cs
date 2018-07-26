@@ -16,7 +16,10 @@ namespace SOLID._03_Liskov_substitution
             this.ID = id; this.Name = name;
         }
 
-        public abstract decimal CalculateBonus(decimal salary);
+        public virtual decimal CalculateBonus(decimal salary)
+        {
+            return 0;
+        }
 
         public override string ToString()
         {
@@ -57,9 +60,5 @@ namespace SOLID._03_Liskov_substitution
 
         public ContractEmployee(int id, string name) : base(id, name)
         { }
-        public override decimal CalculateBonus(decimal salary)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
