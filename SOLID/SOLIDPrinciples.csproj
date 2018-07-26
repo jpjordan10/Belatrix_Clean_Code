@@ -43,11 +43,17 @@
   <ItemGroup>
     <Compile Include="01 SingleResponsability\Sample.cs" />
     <Compile Include="02 OpenClosed\Employee.cs" />
+    <Compile Include="02 OpenClosed\SalaryAdministration.cs" />
     <Compile Include="03 Liskov substitution\LiskovSample.cs" />
-    <Compile Include="04 Interface Segregation\IPrintTasks.cs" />
+    <Compile Include="04 Interface Segregation\CannonMG2470.cs" />
+    <Compile Include="04 Interface Segregation\HPLaserJet.cs" />
+    <Compile Include="04 Interface Segregation\IAdvancedPrinter.cs" />
+    <Compile Include="04 Interface Segregation\IBasicPrinter.cs" />
     <Compile Include="05 Dependency Inversion\Emailer.cs" />
+    <Compile Include="05 Dependency Inversion\IWeather.cs" />
     <Compile Include="05 Dependency Inversion\Phone.cs" />
     <Compile Include="05 Dependency Inversion\WeatherTracker.cs" />
+    <Compile Include="Const.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
